@@ -23,6 +23,9 @@
                                     <segment title="Medium"/>
                                     <segment title="Low"/>
                                 </segments>
+                                <connections>
+                                    <action selector="priorityValueChangedWithSegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="wkM-6p-eCo"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nBL-XE-aaf">
                                 <rect key="frame" x="10" y="164" width="394" height="688"/>
@@ -85,7 +88,7 @@
                                 <rect key="frame" x="15" y="231.5" width="384" height="32"/>
                                 <segments>
                                     <segment title="HIgh"/>
-                                    <segment title="High"/>
+                                    <segment title="Medium"/>
                                     <segment title="Low"/>
                                 </segments>
                             </segmentedControl>

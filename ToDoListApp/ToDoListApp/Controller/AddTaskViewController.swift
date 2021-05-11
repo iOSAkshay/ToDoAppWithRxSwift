@@ -13,6 +13,12 @@ import RxCocoa
 
 class addTaskViewController: UIViewController {
     
+    private let taskSubject = PublishSubject<Task>()
+    
+    var taskSubjectObservable: Observable<Task> {
+        return taskSubject.asObservable()
+    }
+    
     @IBOutlet var TaskDesciTextField: UITextField!
     @IBOutlet var prioritySegmentedController: UISegmentedControl!
     
@@ -28,7 +34,8 @@ class addTaskViewController: UIViewController {
         }
         
         let task = Task(title: title, priority: priority)
-        
+        taskSubject.onNext(task)
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
